@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patitos de Hule</title>
+    <link rel="icon" href="./icon_patito.png" type="image/icon">
+    <link rel="stylesheet" href="./pagina_ventas.css">
+</head>
+
+<body align="center">
+    <font face="MS UI Gothic">
+        <!--Nombre de la tienda-->
+        <br>
+        
+        <p class="titulo"> Patitos de Hule <img src=".\patito.png" width="35"> </p>
+
+        <!--Descripción de la tienda-->
+
+        <font size="4">
+            <p> <i> Bienvenido a la tienda en linea de patitos de hule! </i></p>
+            <p> En la tienda puedes encontrar 4 diferentes tipos de patitos para adquirir</p>
+            <p> Selecciona el que prefieras, llena el formulario y luego haz click en Comprar</p> 
+            <br>
+
+            <font size="5" color="#28345e"><p><b> Productos </b></p></font> <br>
+
+            <!--Imagenes de los productos-->
+
+            <table align="center">
+                <tr align="center" valign="middle">
+                    <td width="200"> <img src=".\mod_patito_clasico.jpg" width="150"> </td>
+                    <td width="200"> <img src=".\mod_patito_batman.jpg" width="150"> </td>
+                    <td width="200"> <img src=".\mod_patito_cazafantasma.jpg" width="140"> </td>
+                    <td width="200"> <img src=".\mod_patito_aviador.jpg" width="120"> </td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td><b> Patito Clasico </b></td>
+                    <td><b> Patito Batman </b></td>
+                    <td><b> Patito Cazafantasma </b></td>
+                    <td><b> Patito Aviador </b></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td> $135.00 </td>
+                    <td> $200.00 </td>
+                    <td> $150.00 </td>
+                    <td> $175.00 </td>
+                </tr>
+            </table>
+
+            <br>
+
+            <!--Formulario
+            Dos secciones:
+            (1) Datos del comprador
+            (2) Especificaciones del producto
+            - Al menos 6 tipos de input diferentes
+            - Usar selecgt
+            - Usar textarea
+            - Usar radio button/checkbox
+            - Botón para enviar y borrar información
+            -->
+
+            <br>
+
+            <form>
+                <fieldset>
+                    <legend> <font size="5" color="#28345e"><p><b> Compra </b></p></font> </legend>
+                    <table align="center">
+                    <tr align="left">
+                        <td width="175"> <label> Producto </label> </td>
+                        <td> <select><optgroup>
+                                <option> (Selecciona el producto) </option>
+                                <option> Patito Clasico </option>
+                                <option> Patito Batman </option>
+                                <option> Patito Cazafantasma </option>
+                                <option> Patito Aviador </option>
+                             </optgroup></select> </td></tr>
+                    <tr align="left">
+                        <td> <label> Cantidad (1-100)</label><br> </td>
+                        <td> <input type="number" min="1" max="100"> </td></tr> <!--1ER TIPO DE INPUT (NUMBER)-->
+                    </table>     
+                </fieldset>
+
+                <fieldset>
+                    <legend> <font size="5" color="#28345e"><p><b> Datos del comprador </b></p></font> </legend>
+                    <table align="center">
+                    <tr align="left">
+                        <td width="175"> <label> Nombre </label> </td>
+                        <td> <input type="text"/> </td> </tr>  <!--2NDO TIPO DE INPUT (TEXT)-->
+                    <tr align="left">
+                        <td> <label for="correo"> Correo  </label><br> </td>
+                        <td> <input id="correo" type="email"/> </td></tr> <!--3ER TIPO DE INPUT (EMAIL)-->
+                    <tr align="left">
+                        <td> <label> Telefono </label><br> </td>
+                        <td> <input type="tel" name="telefono" maxlength="10"/> </td></tr> <!--4RTO TIPO DE INPUT (TEL)-->
+                    <tr align="left">
+                        <td> <label> Domicilio </label><br> </td>
+                        <td> <input type="text"/> </td></tr> 
+                    <tr align="left">
+                        <td> <label> Codigo postal </label><br> </td>
+                        <td> <input type="text"/> </td></tr> 
+                    <tr align="left" height="55" valign="top">
+                        <td> <label> Comentarios </label><br> </td>
+                        <td> <textarea cols="75" rows="2" minlenght="20"> </textarea></td></tr> 
+                    <tr align="left">
+                        <td colspan="2"> <label> Vivo en la Zona Metropolitana (CDMX, EdoMex) </label><br> </td>
+                        <td><input type="radio" name="localidad" value="metro"/></td></tr> <!--5TO TIPO DE INPUT (RADIO)-->
+                    <tr align="left" height="35" valign="top">
+                        <td colspan="2"> <label> Vivo fuera de la Zona Metropolitana </label><br> </td>
+                        <td><input type="radio" name="localidad" value="no_metro"/></td></tr>
+                    <tr align="left">
+                        <td colspan="2"> <label> He leído y acepto los términos y condiciones de uso </label><br> </td>
+                        <td><input type="checkbox"/></td></tr> <!--6TO TIPO DE INPUT (CHECKBOX)-->
+                    <tr align="left">
+                        <td colspan="2"> <label> Deseo que me manden a mi correo informacion sobre promociones futuras </label></td>
+                        <td><input type="checkbox"/></td></tr> 
+                    </table>  
+                </fieldset>
+                <br>
+                    <button type="submit"> Comprar </button>
+                    <button type="reset"> Borrar </button>
+                <br><br>
+
+            </form>
+
+        </font>
+
+    </font>
+
+
+</body>
+</html>

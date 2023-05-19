@@ -1,0 +1,14 @@
+@font-face
+{
+    font-family:"Bubble";
+    src: url('./Bubblegum.ttf');
+}
+
+.titulo
+{
+    font-family:"Bubble", serif;
+    color:rgb(57, 133, 248);
+    font-size: xx-large;
+    position:static;
+    text-align:center;
+}
