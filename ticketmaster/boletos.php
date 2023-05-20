@@ -5,82 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./icon_patito.png" type="image/icon">
-    <link rel="stylesheet" href="./statics/style/ticketmaster_style.css">
+    <link rel="stylesheet" href="./statics/styles/ticketmaster_style.css">
     <title>Tu Orden</title>
 </head>
 <body>
     <?php
         
+        $pobre = 0;
+
         $nombre = (isset($_POST["nombre"]) && $_POST["nombre"] != "")? $_POST["nombre"] : false;
+            if($nombre == false)
+                echo 'ERROR: No has introducido tu Nombre';
         $apellido = (isset($_POST["apellido"]) && $_POST["apellido"] != "")? $_POST["apellido"] : false;
+            if($apellido == false)
+                echo 'ERROR: No has introducido tu Apellido';
         $zona = (isset($_POST["zona"]) && $_POST["zona"] != "")? $_POST["zona"] : false;
+            if($zona == false)
+                echo 'ERROR: No has introducido tu Zona';
         $boletos = (isset($_POST["boletos"]) && $_POST["boletos"] != "")? $_POST["boletos"] : false;
+            if($boletos == false)
+                echo 'ERROR: No has introducido tu Cantidad de boletos';
         $artista = (isset($_POST["artista"]) && $_POST["artista"] != "")? $_POST["artista"] : false;
+            if($artista == false)
+                echo 'ERROR: No has introducido tu Artista';
         $fecha = (isset($_POST["fecha"]) && $_POST["fecha"] != "")? $_POST["fecha"] : false;
+            if($fecha == false)
+                echo 'ERROR: No has introducido tu Fecha';
         $lugar = (isset($_POST["lugar"]) && $_POST["lugar"] != "")? $_POST["lugar"] : false;
-        /*$transporte = (isset($_POST["Transporte"]) && $_POST["Transporte"] != "")? $_POST["Transporte"] : NULL;
-        $comida = (isset($_POST["Comida"]) && $_POST["Comida"] != "")? $_POST["Comida"] : NULL;
-        $taza = (isset($_POST["Comida"]) && $_POST["Comida"] != "")? $_POST["Comida"] : NULL;*/
-        $transporte = $_POST["transporte"];
+            if($fecha == false)
+                echo 'ERROR: No has introducido tu Lugar';
 
-        //$nombre = $_POST['nombre'];
-        /*$apellido = $_POST['apellido'];
-        $nombre = $_POST['nombre'];
-        $nombre = $_POST['nombre'];
-        $nombre = $_POST['nombre'];
-        $nombre = $_POST['nombre'];
-        $nombre = $_POST['nombre'];*/
+        $transporte = (isset($_POST["transporte"]) && $_POST["transporte"] != "")? $_POST["transporte"] : 1;
+            if($transporte == 1)
+            {
+                $pobre += $transporte;
+                $transporte = "";
+            }  
+        $comida = (isset($_POST["comida"]) && $_POST["comida"] != "")? $_POST["comida"] : 1;
+            if($comida == 1)
+            {
+                $pobre += $comida;
+                $comida = "";
+            }
+        $taza = (isset($_POST["taza"]) && $_POST["taza"] != "")? $_POST["taza"] : 1;
+            if($taza == 1)
+            {
+                $pobre += $taza;
+                $taza = "";
+            }
 
+        echo '<br><p class="subtitulo" align="center"> Gracias por tu compra! </p>';
 
-        echo $nombre.'<br>'; //hecho
-        echo $apellido.'<br>'; //hecho
-        echo $zona.'<br>';
-        echo $boletos.'<br>';
-        echo $artista.'<br>'; //hecho
-        echo $fecha.'<br>'; //hecho
-        echo $lugar.'<br>'; //hecho 
-        echo $transporte.'<br>';
-        /*echo $comida.'<br>';
-        echo $taza;*/
+        $frase = "";
 
-        echo'
-        <table align="center" border="1" cellspacing="0"> 
-            <tr>
-                <td height="100px" align="center" valign="middle" colspan="2"> Ticketmaster 2.0 </td></tr>
-            <tr>
-                <td width="200" height="65px" align="center" valign="middle"> Evento</td>
-                <td width="200" align="center"> '.$artista.'</td></tr>
-            <tr>
-                <td height="65px" align="center" valign="middle" colspan="2"> <img src="./img/'.$artista.'.jpg" width="350"> </td></tr>
-            <tr>
-                <td height="65px" align="center" valign="middle"> Datos del comprador </td>
-                <td align="center"> '.$nombre." ".$apellido.'</td></tr>
-            <tr>
-                <td height="65px" align="center" valign="middle"> Lugar </td>
-                <td align="center"> '.$lugar.' </td></tr>
-            <tr>
-                <td height="65px" align="center" valign="middle"> Fecha </td>
-                <td align="center"> '.$fecha.'</td></tr>
-            <tr>
-                <td height="65px" align="center" valign="middle"> Extras </td>
-                <td align="center"> '.$fecha.'</td></tr>
-            
+        switch($artista)
+        {
+            case "Luis Miguel":
+                $frase = "\"Cuando calienta el sol\"";
+                break;
+            case "Billie Eillish":
+                $frase = "\"Can't stop starin' at those ocean eyes\"";
+                break;
+            case "Rosalia":
+                $frase = "\"Okay, motomami\"";
+                break;
+            case "Kendrick Lamar":
+                $frase = "\"But the one in front of the gun lives forever\"";
+                break;
+        }
+        echo '<br><br>';
 
-        </table>';
-        
+        if($boletos > 15)
+        {
+            $resto = $boletos - 15;
+            echo '<br> Has pedido mas de 15 boletos. No se han impreso '.$resto.' boletos.';
+            $boletos = 15;
+        }
+        if($boletos <=0)
+        {
+            echo '<br> ERROR: Has pedido menos de un boleto';
+        }
 
-        /*
-        La siguiente vista será donde se desplieguen los boletos adquiridos
-                
-        Se debe desplegar la cantidad de boletos seleccionada.
-        En cada boleto se deben desplegar los datos personales solicitados, además de la información del evento, 
-            junto con una imagen de la zona, del artista y del lugar y una frase característica del artista elegido.
-        En caso de que algún valor no se especifique, debe aparecer un mensaje de error indicando todos los datos
-            que faltan por especificar para que el usuario pueda corregir
-        En caso de que los boletos sean iguales o menores de cero se imprime el mensaje de error, en caso de que 
-            rebasen los 15 se muestran solamente 15 y un mensaje que especifique cuantos faltaron por imprimir.
-            El apartado de extras es el único que puede quedar sin ninguna opción seleccionada y en dicho caso se despliega el mensaje "sin extras".
-        */
+        for($cont=$boletos; $cont>0; $cont=$cont-1)
+        {
+            echo'
+            <p align="center" class="mucho_texto"> Boleto '.$cont.'</p> 
+            <table align="center" border="2" cellspacing="0" id="tablita"> 
+                <tr>
+                    <td height="85px" align="center" valign="middle" colspan="2" class="subtitulo"><b> Ticketmaster 2.0 </b></td></tr>
+                <tr>
+                    <td width="260" height="52px" align="center" valign="middle"><b> Evento </b></td>
+                    <td width="260" align="center"> '.$artista.'</td></tr>
+                <tr>
+                    <td height="65px" align="center" valign="middle" colspan="2"> <img src="./img/'.$artista.'.jpg" height="100px"> </td></tr>
+                <tr>
+                    <td height="52px" align="center" valign="middle"><b> Datos del comprador </b></td>
+                    <td align="center"> '.$nombre." ".$apellido.'</td></tr>
+                <tr>
+                    <td height="52px" align="center" valign="middle"><b> Fecha </b></td>
+                    <td align="center"> '.$fecha.'</td></tr>
+                <tr>
+                    <td height="52px" align="center" valign="middle"><b> Lugar </b></td>
+                    <td align="center"> '.$lugar.' </td></tr>
+                <tr>
+                    <td height="65px" align="center" valign="middle" colspan="2"> <img src="./img/'.$lugar.'.jpg" height="90px"> </td></tr>
+                <tr>
+                    <td width="200" height="52px" align="center" valign="middle"><b> Zona </b></td>
+                    <td width="200" align="center"> '.$zona.'</td></tr>
+                <tr>
+                    <td height="65px" align="center" valign="middle" colspan="2"> <img src="./img/'.$zona.'.jpg" height="90px"> </td></tr>
+                <tr>
+                    <td height="100px" align="center" valign="middle"><b> Extras </b></td>';
+                    if($pobre!=3)
+                        echo '<td align="center"> '.$transporte.'<br>'.$comida.'<br>'.$taza.'</td></tr>';
+                    else
+                        echo '<td align="center"> Sin extras </td></tr>';
+                echo '<tr>
+                    <td height="70px" align="center" valign="middle" colspan="2"> <i>'.$frase.'</i> </td></tr>
+            </table> <br><br>';
+        }
 
     ?>
 </body>

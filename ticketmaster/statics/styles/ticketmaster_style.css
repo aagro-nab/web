@@ -1,24 +1,61 @@
-.cuadrito{
-    width: 200px;
-    height: 500px;
-    margin: 100px;
+/* -------------------------- FONTS --------------------------*/
+
+@font-face {
+    font-family:"Crazy";
+    src: url("./crazy-type-regular.ttf");
+}
+
+@font-face {
+    font-family:"CascadiaCode";
+    src: url("./CascadiaCode.ttf");
+}
+
+/* -------------------------- TEXTO --------------------------*/
+
+.titulo{
+    font-family: "Crazy";
+    color: rgb(61, 75, 206);
+    font-size: 100px;
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.subtitulo{
+    font-family: "CascadiaCode";
+    color: rgb(61, 75, 206);
+    text-align: center;
+    font-size: larger;
+}
+
+.mucho_texto{
+    font-family: "CascadiaCode";
+    text-align: center;
 }
 
 .comprar{
-    width: 400px;
-    height: 120px;
-    margin: 100px;
+    width: 100px;
+    height: 20px;
+    margin: 30px;
+    text-align: center;
+    vertical-align: center;
 }
 
-.row{
-    vertical-align: middle;
-    align-self: center;
-    height: 100px;
+/* -------------------------- INPUTS --------------------------*/
+
+.cuadrito{
+    width: 470px;
+    height: 20px;
+    /*margin: 100px;*/
 }
 
-#ticketmaster{
-    height: 150px;
-    font-size: 80px;
-    vertical-align: middle;
-    align-self: center;
+
+/* -------------------------- TABLA --------------------------*/
+
+#tablita{
+    font-family: "CascadiaCode";
+    border-color: rgb(112, 112, 112);
+    background-color: rgb(231, 231, 231);
 }
