@@ -1,4 +1,334 @@
+/*------------------------FUENTES------------------------*/
 @font-face {
-    font-family:"Crazy";
-    src: url("./crazy-type-regular.ttf");
-}   
+    font-family:"Bristol";
+    src: url("../../statics/fonts/Bristol.ttf");
+}
+
+@font-face {
+    font-family:"Inkpoint";
+    src: url("../../statics/fonts/Inkpoint.ttf");
+}
+
+body{
+    background-image: url("../media/img/paper.png");
+}
+
+/*------------------------GENERAL------------------------*/
+.sub{
+    display:flex;
+    font-family: "Inkpoint";
+    font-size: 200%;
+    font-weight: lighter;
+}
+.sub_centro{
+    display:flex;
+    margin-bottom: 2rem;
+    justify-content: center;
+    font-family: "Inkpoint";
+    font-size: 200%;
+    font-weight: lighter;
+}
+
+/*------------------------FLORES------------------------*/
+
+#flor-1{
+    position:absolute;
+    top:150px;
+    left:1200px;
+    transform: rotate(-0.25turn);
+}
+
+#flor-2{
+    position:absolute;
+    top:100px;
+    left:200px;
+}
+
+/*------------------------HEADER------------------------*/
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    font-family: "Bristol";
+    font-size: 500%;
+}
+
+/*------------------------FOTITO------------------------*/
+#fotito{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#intereses{
+    border-image-source: url("../media/img/washi-tape-2.png");
+    border-image-width: auto;
+    border-image-outset: 8;
+    border-image-repeat: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#mi_foto:hover{
+    transform: rotate(-0.025turn);
+}
+
+/*------------------------PELIS------------------------*/
+#pelis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#galeria{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 30px;
+}
+
+.cuadrito{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.imagen-peli:hover {
+    transform:scale(1.2);
+}
+
+.textito{
+    margin: 28px;
+    flex: 2;
+}
+
+/*------------------------COMIDAS Y TOP------------------------*/
+
+#comidas{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#lista{
+    position: relative;
+    bottom: 30px;
+    left: 30px;
+        
+    width: 600px;
+    height: 200px;
+    background-color: rgb(250, 250, 250);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+#lista-2{
+    position: relative;
+    top: 30px;
+    right: 30px;
+
+    width: 600px;
+    height: 200px;
+    background-color: rgb(250, 250, 250);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.especial{
+    display:flex;
+    margin-bottom: 10rem;
+    margin-top: 4rem;
+    margin-right: 30px;
+    margin-left: 30px;
+    text-align: center;
+    justify-content: center;
+    font-family: "Inkpoint";
+    font-size: 200%;
+    font-weight: lighter;
+    background-image: url("../media/img/washi-tape-2.png");
+}
+
+.especial-2{
+    display:flex;
+    margin-bottom: 10rem;
+    margin-top: 3rem;
+    margin-right: 30px;
+    margin-left: 30px;
+    text-align: center;
+    justify-content: center;
+    font-family: "Inkpoint";
+    font-size: 200%;
+    font-weight: lighter;
+    background-image: url("../media/img/washi-tape.png");
+}
+
+
+#contenido{
+    padding-top: 3rem;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sub-pequeño{
+    font-family: "Inkpoint";
+    font-size: 160%;
+    font-weight: lighter;
+    margin-bottom: 7rem;
+    margin-right: 35px;
+    margin-left: 35px;
+    text-align: center;
+}
+
+/*------------------------CANCIONCITAS------------------------*/
+
+#cancioncitas{
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-completo{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.videos-columna{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*------------------------PERSONAJES------------------------*/
+
+#personajes{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#columna-personajes{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta{
+    width: 1000px;
+    height: 300px;
+    background-image: url("../media/img/tarjeta.png");
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.otro-sub-pequeño{
+    font-family: "Inkpoint";
+    font-size: 130%;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.nombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8rem;
+    width: 130px;
+}
+
+.descripcion{
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+}
+
+.texto-personaje{
+    text-align: center;
+}
+
+.imagen-personaje{
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+    width: 435px;
+}
+
+.personaje-individual{
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+}
+
+/*------------------------HUEVO------------------------*/
+
+#huevo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 90px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+#boton_chico{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    background-color: rgb(250, 216, 82);
+}
+
