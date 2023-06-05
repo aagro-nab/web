@@ -22,6 +22,12 @@
         //echo $tipo_archivo.'<br>';
         //echo $nombre.'<br>';
 
+        if (!file_exists("../../statics/files"))
+        {   
+            mkdir("../../statics", 0700);
+            mkdir("../../statics/files", 0700);
+        }
+
         if($tipo_archivo == "archivo")
         {
             $archivo = "../../statics/files/$nombre.txt";
@@ -32,7 +38,7 @@
         } 
         else 
         {
-            $carpeta = "../../statics/files/$nombre";   
+            $carpeta = "../../statics/files/ojo/$nombre";   
             if(file_exists($carpeta))
                 echo "ERROR: No se puede crear el directorio porque ya existe una carpeta con ese nombre";
             else
