@@ -1,0 +1,327 @@
+/*-----------------------FUENTES-----------------------*/
+@font-face {
+    font-family: "Buble";
+    src: url(../fonts/FranxurterTotallyFat-X3G4Z.ttf);
+}
+
+@font-face {
+    font-family: "Raro";
+    src: url(../fonts/Bubbly-Regular.ttf);
+}
+
+/*-----------------------SECCIONES-----------------------*/
+body{
+    margin: 0%;
+    background-color: rgb(166, 216, 237);
+}
+
+header{
+    height: 55px;
+    background-color: rgb(255, 214, 79);
+    position: sticky;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    text-align: center;
+    line-height: 55px;
+    font-family: "Buble";
+    font-size: 45px;
+    color: rgba(255, 0, 0, 0.605);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(166, 216, 237);
+    padding-bottom: 2rem;
+}
+
+/*-----------------------BIENVENIDA-----------------------*/
+
+#bienvenida{
+    text-align: center;
+    padding-top: 1rem;
+    color: white;
+    font-family: "Raro";
+    font-size: 25px;
+}
+
+/*-----------------------GRID-----------------------*/
+
+#grid{
+    /*margin:auto;*/
+    /*width: 100%;*/
+    margin-top: 15px;
+    display: grid;
+    grid-template-rows: repeat(4, 250px);
+    grid-template-columns: repeat(6, 225px);
+    background-color: rgb(166, 216, 237);
+    gap: 20px;
+}
+
+/*-----------------------CUADROS INDIVIDUALES-----------------------*/
+
+.imagen{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/*
+.otro_imagen{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}*/
+
+.caja_texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.precio{
+    width: 200px;
+    height: 70px;
+    font-family: "Raro";
+    background-color: rgba(127, 255, 212, 0.523);
+    color: rgb(67, 174, 220);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+p{
+    font-family: "Raro";
+    margin: auto;
+    text-align: center;
+}
+
+/*-----------------------CUADRITOS DEL GRID-----------------------*/
+
+/*******PRIMERA FILA********/
+
+/*POLAR CON HACHA*/
+#cuA1{
+    grid-area: 1 / 1 / 2 / 4;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -6px 9px 0px 0px rgba(115, 198, 234, 0.799);
+}
+
+#polar_hacha:active{
+    transform: scale(1.4);
+}
+    
+/*PANDA CON TELEFONO*/
+#cuA2{
+    grid-area: 1 / 4 / 2 / 7;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -6px 9px 0px 0px rgba(115, 198, 234, 0.799);
+}
+
+#panda_telefono:active{
+    animation-name: scrolleando;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes scrolleando{
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*******SEGUNDA FILA*******/
+
+/*NOM NOM*/
+#cuB1{
+    grid-area: 2 / 1 / 3 / 4;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -6px 9px 0px 0px rgba(115, 198, 234, 0.799);
+}
+
+#nom_nom:hover{
+    transform: skew(-50deg, 12deg);
+}
+
+/*PARDO CON BURRITO*/
+#cuB2{
+    grid-area: 2 / 4 / 3 / 7;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -6px 9px 0px 0px rgba(115, 198, 234, 0.799);
+}
+
+#pardo_burrito{
+    animation-name: comiendo;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes comiendo{
+    0%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+
+/*******TERCERA FILA*******/
+
+/*PANDA ENOJADO*/
+#cuC1{
+    grid-area: 3 / 1 / 4 / 3;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -6px 9px 0px 0px rgba(115, 198, 234, 0.799);
+}
+
+#panda_enojado{
+    animation-name: enojado;
+    animation-duration: 0.3s;
+    animation-timing-function:ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes enojado{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform:scale(1.05);
+    }
+}
+
+/*POLAR*/
+#cuC2{
+    grid-area: 3 / 3 / 4 / 5;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -6px 9px 0px 0px rgba(115, 198, 234, 0.799);
+}
+
+#polar:hover{
+    transform: rotate(180deg);
+}
+
+/*CHARLIE*/
+#cuC3{
+    grid-area: 3 / 5 / 4 / 7;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -6px 9px 0px 0px rgba(115, 198, 234, 0.799);
+}
+
+#charli:active{
+    transform: skew(8deg, 8deg);
+
+}
+
+/*******CUARTA FILA*******/
+#cuD1{
+    grid-area: 4 / 1 / 5 / 4;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -6px 9px 0px 0px rgba(115, 198, 234, 0.799);
+}
+
+#pardito{
+    width: 250px;
+}
+
+#pardito:hover{
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transform: translate(150px);
+}
+
+/*OSOS*/
+#cuD2{
+    grid-area: 4 / 4 / 5 / 7;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: -6px 9px 0px 0px rgba(115, 198, 234, 0.799);
+}
+
+#osos{
+    position: relative;
+    right: 40px;
+    align-items: center;
+    width: 180px;
+    animation-name: movimiento;
+    animation-duration: 1.8s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform:translate(44px, 10px);
+    }
+    40%{
+        transform:translateX(88px);
+    }
+    60%{
+        transform:translate(132px, 10px);
+    }
+    80%{
+        transform: translateX(176px);
+    }
+    100%{
+        transform:translate(220px, 10px);
+    }
+}
+
+
