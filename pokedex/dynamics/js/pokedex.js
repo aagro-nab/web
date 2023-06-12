@@ -99,14 +99,6 @@ window.addEventListener("load", ()=>{
                 console.log(datosDiv);
 
                 editar.addEventListener("click", () => {
-                    // const positionSelect = document.querySelector("#position");
-                    // subject.insertAdjacentHTML(
-                    // positionSelect.value,
-                    // "<strong>inserted text</strong>"
-                    // );
-                    // mostrar.insertAdjacentHTML(
-                    //     "afterbegin", form
-                    // );
                     mostrar.innerHTML = "";
                     
                     let form = document.createElement("form");
@@ -130,8 +122,7 @@ window.addEventListener("load", ()=>{
                     </div>  `;
 
                     let varDatos = Array();
-                    //varDatos[0] = titulo[0].toLowerCase;
-                    
+
                     for(u=1; u<=4; u++){
                         varDatos[u-1] = titulo[u].toLowerCase();
 
@@ -162,7 +153,6 @@ window.addEventListener("load", ()=>{
                             console.log("si entro incluso a la otra cosa");
                             selectTipoAct.innerHTML += `<option value = ${tipo.type_id}>${tipo.type_name}</option>`;
                         }
-                        // selectTipoAct.innerHTML += `hola`;
 
                         divActualizar.innerHTML += 
                         `<button data-id="${datosJSON.pok_id}" id="btn-listo" class="botones" type="submit">
@@ -170,11 +160,6 @@ window.addEventListener("load", ()=>{
                         </button> `;
 
                         console.log(formActualizar);
-
-                        
-                        // mostrar.insertAdjacentHTML(
-                        //     "beforeend", "</form>"
-                        // );
 
                         console.log(id_pokemon);
                         
@@ -207,15 +192,6 @@ window.addEventListener("load", ()=>{
                         alert(datosJSON.mensaje);
                         mostrar.innerHTML = "";
                     });
-                    
-                    // fetch("./dynamics/php/editar.php", {
-                    //     method: "POST",
-                    //     body: datosForm
-                    // }).then((respuesta)=>{
-                    //     return respuesta.json();
-                    // }).then ((datosJSON)=>{
-                    //     alert(datosJSON.mensaje);
-                    // });
                 });
                 
             });

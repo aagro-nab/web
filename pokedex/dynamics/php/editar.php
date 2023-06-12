@@ -16,14 +16,10 @@
             $sql = "UPDATE pokemon 
             SET pok_height = $altura, pok_weight = $peso, pok_base_experience = $experiencia
             WHERE pok_id = $id ";
-            // $sql = "INSERT INTO pokemon (pok_name, pok_height,pok_weight, pok_base_experience)
-            // VALUES ('$nombre', '$altura', '$peso', '$exp_base')";
             $res = mysqli_query($conexion, $sql);
-            // $id = mysqli_insert_id($conexion);
             $sql2 = "UPDATE pokemon_types
             SET type_id = '$tipo'
             WHERE pok_id = $id";
-            // $sql2 = "INSERT INTO pokemon_types (pok_id, type_id) VALUES ('$id', '$tipo')";
             $res2 = mysqli_query($conexion, $sql2);
             if(!$res || !$res2)
             {
